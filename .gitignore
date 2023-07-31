@@ -10,6 +10,8 @@
 # Ignore local python virtual environment
 venv/
 
+vosk_small/
+
 # Ignore streamlit_chat_app.py conversations pickle
 conversations.pkl
 *.pkl
