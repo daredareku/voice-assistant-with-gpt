@@ -9,8 +9,18 @@ from PIL import Image, ImageTk
 from mic import recognize_wheel
 from chat import write_history, new_dialogue
 
+import signal
+
+
 
 class Application(tk.Tk):
+
+    def signal_handler(signal, frame):
+        print('You pressed Ctrl+C!')
+        sys.exit(0)
+
+    signal.signal(signal.SIGINT, signal_handler)
+    # Your main program logic goes here...
 
     def __init__(self):
         tk.Tk.__init__(self)

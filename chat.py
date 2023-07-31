@@ -124,6 +124,8 @@ def start_dialogue(text):
             os.environ.update(NEW_DIALOGUE='0')
 
         openai.api_key = os.getenv('OPENAI_API_KEY')
+        if openai.api_key == null : 
+            print('Exception with OpenAI KeyError ')
         
         #добавляем наш запрос в диалог
         messages.append({'role': 'user', 'content': text})
